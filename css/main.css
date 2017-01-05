@@ -1,0 +1,125 @@
+    @font-face {
+    font-family: 'arcade_game'; /*a name to be used later*/
+    src: url('fonts/ca.ttf'); /*URL to font*/
+    }
+    @font-face {
+       font-family: 'space_invaders'; /*a name to be used later*/
+       src: url('fonts/invaders.from.space.[fontvir.us].ttf'); /*URL to font*/
+    }
+
+    body {
+        overflow:hidden;
+        padding:0;
+        margin:0;
+        color:#00BFFF;
+        background-color:#000;
+        font-family:arial;
+        font-size:100%;
+    }
+
+    #info_top_left {
+        text-decoration:none;
+        position:absolute;
+        font-family:arcade_game;
+        background-color: rgba(0,191,255,0.3);
+        top:0;
+        left:0;
+        padding:5px;
+    }
+    
+    #info_top_right {
+        text-decoration:none;
+        position:absolute;
+        font-family:arcade_game;
+        background-color: rgba(0,191,255,0.3);
+ top:0;
+        right:0;
+       // margin:10px;
+        padding:5px;
+    }
+
+    #info_bottom {
+        text-decoration:none;
+        position: absolute; 
+        font-family:arcade_game;
+        background-color: rgba(0,191,255,0.3);
+        padding : 5px;
+        right:0;
+        bottom:0;
+    }
+
+
+    #dialog {
+        z-index:5;
+        width:100%;
+        visibility:hidden;
+        position:absolute;
+        bottom:50%;
+        min-height: 20%;
+        margin:0;
+        padding:0;
+        text-align:center;
+        text-transform:uppercase;
+    }
+
+    #vertical-center{
+        z-index:5;
+        visibility:hidden;
+        position:absolute;
+        margin:0px;
+        padding:10px;
+        width:100%;
+        text-align:center;
+        display: table-cell;
+        color:#ffffff;
+        background-color:rgba(0,191,255,0.2);
+        vertical-align:middle;
+        font-family:arcade_game;
+    }
+    
+    .text-blue{
+                color:#00BFFF;
+    }
+    
+        .text-orange{
+                color:orangered;
+    }
+    
+    
+    .text-large{
+        font-size: 120%;
+    }
+    
+    #main-title{
+                font-size:400%;
+                text-transform:uppercase;
+    }
+    
+    #points_system{
+        font-size:250%;
+        text-align: center;
+    }
+    
+    #points_system span{
+        text-align: center;
+    }
+    
+    #alienV{
+        color:#FF0000;
+    }
+    
+    #alienG, #alienB, #alienD, #alienV{
+        font-family: space_invaders;
+    }
+    
+    #alienG{
+        color: #72FF0D;
+    }
+    
+    #alienB{
+        color: #E800F9;
+    }
+    
+    #alienD{
+        color: #F7FF00;
+    }

@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Space Invaders 3D</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+        <script src="lib/three.min.js"></script>
+        <script src="lib/Please.js" type="text/javascript"></script>
+        <script src="lib/three.js/Detector.js"></script>
+        <script src="lib/threex/THREEx.screenshot.js"></script>
+        <script src="lib/threex/THREEx.FullScreen.js"></script>
+        <script src="lib/threex/THREEx.WindowResize.js"></script>
+        <script src="lib/tween.min.js" type="text/javascript"></script>
+        <script src="lib/orbital.js"></script>
+        <script src="lib/threex/THREEx.KeyboardState.js" type="text/javascript"></script>
+        <script src="lib/threex/threex.rendererstats.js" type="text/javascript"></script>
+        <script src="lib/three.js/Stats.js" type="text/javascript"></script>
+        <script src="lib/postprocessing/Glitch.js" type="text/javascript"></script>
+        <script src="lib/postprocessing/EffectComposer.js" type="text/javascript"></script>
+        <script src="lib/fonts/helvetiker_bold.typeface.js" type="text/javascript"></script>
+        <script src="lib/buzz/buzz.min.js" type="text/javascript"></script>
+        <script src="lib/shaders/ShaderPass.js" type="text/javascript"></script>
+        <script src="lib/shaders/DotScreenShader.js" type="text/javascript"></script>
+        <script src="lib/shaders/RGBShiftShader.js" type="text/javascript"></script>
+        <script src="lib/shaders/MaskPass.js" type="text/javascript"></script>
+        <script src="lib/shaders/RenderPass.js" type="text/javascript"></script>
+        <script src="lib/shaders/CopyShader.js" type="text/javascript"></script>
+        <script src="lib/shaders/DigitalGlitch.js" type="text/javascript"></script>
+        <link  href="css/main.css" rel="stylesheet"/>
+        <link  href="css/font-awesome.min.css" rel="stylesheet"/>
+        <link  href="css/font-awesome.css" rel="stylesheet" />
+	
+	<link href="medias/images/favicon.ico" rel="icon" type="image/x-icon" />
+    </head>
+    <body>
+        <!-- three.js container -->
+        <div id="container"></div>
+        <div id="dialog" >
+            <div id="vertical-center">
+                <div id="main-title"></div>
+                <div id="description"></div>
+                <div id="points_system">
+                    <span> Points </span>
+                    <div><span id="alienG">G</span><span> = 10 x level</span></div>
+                    <div><span id="alienB">B</span><span> = 20 x level</span></div>
+                    <div><span id="alienD">D</span><span> = 30 x level</span></div>
+<!--                    <div><span id="alienV">V</span><span> = ??? pt</span></div>-->
+                </div>
+            </div>
+        </div>
+        <!-- info on screen display -->
+        <div id="info">
+            <div id="info_top_left">
+                <span class="score">SCORE &lt<span class="text-orange" id="score"></span>&gt</span>
+                <span class="level">LEVEL &lt<span class="text-orange"  id="level"></span>&gt</span>
+            </div>
+            <div id="info_top_right">
+                <span>
+                    <a onclick="game.sound_manager.muteMusics()"><span id="music"><i  class="fa fa-music"></i></span></a>&nbsp;&nbsp;
+                    <a onclick="game.sound_manager.muteEffects()"><span id="effect"><i class="fa fa-volume-up"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </span>
+                <span class="life">LIFE &lt<span class="text-orange"  id="life"></span>&gt</span>
+                <span class="killable">GOD MODE &lt<span class="text-orange"  id="killable"></span>&gt</span>
+            </div>
+
+            <div id="info_bottom">
+                  <i class="text-orange">h</i> Toggle help
+                | <i class="text-orange">F11</i> Fullscreen
+                | <i class="text-orange">c</i> Camera transition
+                | <i class="text-orange">p</i> Pause
+                | <i class="text-orange">i</i> God mode
+            </div>
+        </div>
+        <script src="js/app/context.js" type="text/javascript"></script>
+        
+        <script src="js/app/sound_manager.js" type="text/javascript"></script>
+        <script src="js/app/post_processing_manager.js" type="text/javascript"></script>
+        <script src="js/app/structure3d.js" type="text/javascript"></script>
+        <script src="js/app/bunker.js" type="text/javascript"></script>
+        <script src="js/app/bullet.js" type="text/javascript"></script>
+        <script src="js/app/player.js" type="text/javascript"></script>
+        <script src="js/app/alien.js" type="text/javascript"></script>
+        <script src="js/app/battalion.js" type="text/javascript"></script>
+        <script src="js/app/army.js" type="text/javascript"></script>
+        <script src="js/app/environment.js" type="text/javascript"></script>
+        <script src="js/app/defense.js" type="text/javascript"></script>
+        <script src="js/app/level.js" type="text/javascript"></script>
+        <script src="js/app/debug.js" type="text/javascript"></script>
+        <script src="js/app/game.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+    </body>
+</html>
